@@ -1,0 +1,270 @@
+@font-face {
+  font-family: AlphaSmoke; /* Имя шрифта */
+  src: url(static/fonts/AlphaSmoke1.TTF); /* Путь к файлу со шрифтом */
+}
+@font-face {
+  font-family: Handjet; /* Имя шрифта */
+  src: url(static/fonts/Handjet.ttf); /* Путь к файлу со шрифтом */
+}
+
+.text{
+  text-align: center;
+}
+
+.screen{
+  pointer-events: none;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.screen__interference{
+  min-height: 1000px;
+
+  z-index: 2000;
+  position: absolute;
+  width: 100vw;
+  height: 107vh;
+  left: 0;
+  top: 0;
+  background-position: center center;
+
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
+
+  background-size: cover;
+}
+.screen__noise-black{
+  min-height: 1000px;
+  z-index:1900;
+
+  pointer-events: none;
+
+  position: absolute;
+  width: 100vw;
+  height: 107vh;
+  left: 0;
+  top: 0;
+
+  background-image: url(../noise/nose_black_z-index.png);
+
+  background-position: center center;
+
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
+
+  background-size: cover;
+}
+.screen__black{
+  min-height: 1000px;
+  z-index:2100;
+
+  pointer-events: none;
+
+  position: absolute;
+  width: 100vw;
+  height: 107vh;
+  left: 0;
+  top: 0;
+
+  background-image: url(../bg_black_alpha.png);
+
+  background-position: center center;
+
+  /*background-repeat: no-repeat;*/
+
+  background-attachment: fixed;
+
+  background-size: cover;
+}
+.screen__noise_white_1{
+  min-height: 1000px;
+  z-index:999;
+
+  opacity: 30;
+
+  pointer-events: none;
+
+  position: fixed;
+  width: 100vw;
+  height: 107vh;
+  left: 0;
+  top: 0;
+
+  background-image: url(../noise/noise_white_2.png);
+
+  /*background-position: center center;*/
+
+  /*background-repeat: no-repeat;*/
+
+  /*background-attachment: fixed;*/
+
+  /*background-size: cover;*/
+
+}
+.screen__noise_white_2{
+  min-height: 1000px;
+  pointer-events: none;
+
+  z-index:1100;
+
+  position: absolute;
+  width: 100vw;
+  height: 107vh;
+  left: 0;
+  top: 0;
+
+  background-image: url(../noise/noise_white_2.png);
+
+  background-position: center center;
+
+  /*background-repeat: no-repeat;*/
+
+  background-attachment: fixed;
+
+  background-size: cover;
+
+}
+
+.text__copyright{
+
+
+  /*margin-top: 32px;*/
+  font-family: 'Handjet',serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11.11px;
+  line-height: 12px;
+
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+}
+
+
+
+.demon-solo{
+  /*margin-top: 10vh;*/
+  margin-top: 5rem;
+  position: relative;
+
+
+}
+
+.cloud{
+  width: 300px;
+  position: absolute;
+
+  left: 22%;
+  top: 5px;
+  z-index: 50;
+
+
+}
+@media (max-width: 1200px){
+  .cloud{  left: 16%;}
+}
+@media (max-width: 992px){
+  .cloud{  left: 4%;}
+}
+@media (max-width: 768px){
+  .cloud{  left: 0; width: 250px}
+}
+@media (max-width: 576px){
+  .cloud{  visibility: hidden}
+}
+
+
+
+.logo{
+  position: relative;
+  max-width: 700px;
+}
+
+.text__logo{
+
+
+
+  z-index: 8;
+
+  font-family: 'AlphaSmoke',serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 99.07px;
+  line-height: 100px;
+  /* identical to box height */
+
+
+  background: linear-gradient(90.45deg, rgba(104, 104, 104, 0.48) -35%, #D5D5D5 52.29%, rgba(100, 100, 100, 0.48) 131.42%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /*background-clip: text;*/
+  text-fill-color: transparent;
+}
+@media (min-width: 769px){
+  .text__logo{display: inline; width: 500px}
+}
+@media (max-width: 769px){
+  .text__logo-side{display: none}}
+
+
+.side{
+  position: absolute;
+  display: flex;
+  left: 6px;
+  top: -1px
+}
+.text__logo-side{
+
+
+  z-index: 5;
+  left: 20px;
+
+  font-family: 'AlphaSmoke',serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 99.07px;
+  line-height: 100px;
+  /* identical to box height */
+
+
+  color: rgba(255, 255, 255, 0.2);
+
+}
+
+.text__slogan{
+  font-family: 'Handjet',serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  /* identical to box height */
+
+  margin-top: 2.9rem;
+
+
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+
+}
+
+.links{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.link__image{
+  margin: 0 10px;
+  transition: 0.3s;
+}
+.link__image:hover{
+  transform: scale(1.2);
+}
+
